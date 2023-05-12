@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -f /etc/passwd ];then
+sudo cp -rp /etc/passwd /etc/pam.d/passwd.20230414
+sudo passwd -l chukwu
+sudo passwd -l peter
+sudo passwd -l Peter
+echo "You've just LOCKED your Peter and Chukwu accounts - GO ahead and fix "
+else
+echo "Configuration not existing"
+fi
