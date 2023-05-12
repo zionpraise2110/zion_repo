@@ -1,0 +1,30 @@
+#!/bin/bash
+sudo apt-get install stress
+stress --cpu 4 --io 3 --vm 2 --vm-bytes 256M --timeout 2000s
+
+
+after copying the file into home directory with winscp
+
+pwd into home directory
+
+mv stresscode.txt stresscode.sh = rename
+chmod u+x stresscode.sh = to change its permision
+
+ls -ltr to validate again
+
+./stresscode.sh = execute
+
+sed -i -e 's/\r$//' stresscode.sh = to repair the script
+
+execute again
+
+./stresscode.sh
+
+duplicate window to see the opeartion
+
+top = to view
+
+ps -ef |grep stress = to what to kill
+
+
+
