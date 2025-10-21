@@ -22,10 +22,18 @@ A modern web application where users can ask questions about God, the Bible, and
 - Axios (HTTP client)
 
 ### Backend
-- Node.js
-- Express
+- Node.js / Vercel Serverless Functions
+- Express (development) / Serverless API (production)
 - OpenAI API (GPT-3.5-turbo)
 - API.Bible (Bible verse integration)
+
+## 🚀 Quick Deploy to Vercel
+
+**Deploy this app to Vercel in minutes!**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
+
+See the [DEPLOYMENT.md](./DEPLOYMENT.md) guide for detailed instructions.
 
 ## Prerequisites
 
@@ -36,7 +44,15 @@ Before running this application, you need:
 3. **OpenAI API Key** - for AI responses
 4. **Bible API Key** (optional) - from [API.Bible](https://scripture.api.bible/)
 
-## Setup Instructions
+## Deployment Options
+
+### Option 1: Deploy to Vercel (Recommended)
+
+For production deployment, see [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step Vercel deployment instructions.
+
+### Option 2: Local Development
+
+## Local Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -186,6 +202,9 @@ The AI will respond with:
 
 ```
 zion_repo/
+├── api/                     # Vercel serverless functions (production)
+│   ├── chat.js             # Main chat API endpoint
+│   └── health.js           # Health check endpoint
 ├── frontend/
 │   ├── src/
 │   │   ├── components/      # Reusable components
@@ -197,10 +216,13 @@ zion_repo/
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
-├── backend/
-│   ├── server.js            # Express server with API endpoints
+├── backend/                 # Express server (local development)
+│   ├── server.js           # Express server with API endpoints
 │   ├── package.json
 │   └── .env.example
+├── vercel.json             # Vercel deployment configuration
+├── package.json            # Root dependencies for API
+├── DEPLOYMENT.md           # Vercel deployment guide
 ├── .gitignore
 └── README.md
 ```
